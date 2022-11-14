@@ -1,12 +1,12 @@
-# AWS Door RDS Snapshot Copy
-Lambda function to Copy Doorfunds(live) RDS snapshots to a Doorbackup(failsafe) for safe-keeping.
+# AWS RDS Snapshot Copy
+Lambda function to Copy live RDS snapshots to a backup for safe-keeping.
 
 ## Background
 Disaster recovery (DR) is often thought of in terms of handling massive failures of infrastructure - the
 loss of a whole data centre for example.
-In Door, these kinds of failures are already mitigated by spreading the RDS instances across multiple availability zones.
+These kinds of failures are already mitigated by spreading the RDS instances across multiple availability zones.
 However, there are other kinds of 'disasters' including the accidental or wilfull wholesale deletion of resources
-by people who have legitimate access to Door AWS account.
+by people who have legitimate access to AWS account.
 
 The Lambda functions provided here offer a way of taking a daily copy of the most recent automated snapshots from
 one or more RDS instances in a Live account to a Failsafe account and can be used as part
