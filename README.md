@@ -1,4 +1,4 @@
-# AWS RDS Snapshot Copy
+# AWS RDS Snapshot
 Lambda function to Copy live RDS snapshots to a backup for safe-keeping.
 
 ## Background
